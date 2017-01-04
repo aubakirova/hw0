@@ -21,11 +21,12 @@ You will need to edit HW0Runner and implement an implementation of the Container
 If you have never worked with interfaces see:
 https://www.tutorialspoint.com/java/java_interfaces.htm
 
-We have included [Section 1.2](#eclipse) on using the project with Eclipse.
+We have included [a section](#eclipse) on using the project with Eclipse.
 
-Start by downloading the code for lab 1 from the course GitHub repository by following the 
- instructions [here](https://github.com/MIT-DB-Class/course-info).
 
+Start by cloning the hw0 repo and downloading the code for hw0 from the course GitHub
+
+## Running Tests
 
 SimpleDB and HW0 uses the [Ant build tool](http://ant.apache.org/) to compile the code and run tests.
 Ant is similar to [make](http://www.gnu.org/software/make/manual/), but
@@ -95,7 +96,7 @@ by copying from build.xml, modifying targets and arguments and renaming it to, s
 
 <a name="eclipse"></a>
 
-### 1.2.  Working in Eclipse 
+### Working in Eclipse 
 
 [Eclipse](http://www.eclipse.org) is a graphical software
 development environment that you might be more comfortable with working in.
