@@ -61,7 +61,6 @@ public class ContainersTest {
 		Set<Integer> s1 = cont.initSet(intClassArray);
 		assertTrue("Size of set is correct", 4 == s1.size());
 		assertTrue("Contains 4", s1.contains(intArray[2])); //Notice the autoboxing
-		fail("Not yet implemented");
 	}
 	
 	@Test 
