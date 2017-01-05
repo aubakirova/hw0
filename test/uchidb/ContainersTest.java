@@ -76,19 +76,24 @@ public class ContainersTest {
 	@Test 
 	public void testMapFunctionality(){
 		Map<String, Integer> myMap = cont.initEmptyMap();
-		for (int i =0; i < intArray.length; i++){
-			myMap.put(strArray[i], intClassArray[i]);
-		}
+		
 		cont.storeMap(myMap);
+		for (int i =0; i < intArray.length; i++){
+			cont.addToMap(strArray[i], intClassArray[i], true);
+		}
+		boolean expFalse = cont.addToMap("Uwe", 1000, false);
+		boolean expTrue = cont.addToMap("Richard", new Integer(42), true);
 		
 		assertTrue("Map correct", intClassArray[2] == cont.getValueFromMap(strArray[2]));
 		assertTrue("Map correct", intClassArray[0] == cont.getValueFromMap(strArray[0]));
 		assertTrue("Map correct", intClassArray[0] != cont.getValueFromMap(strArray[1]));
+		assertTrue("Map correct", 42 == cont.getValueFromMap("Richard"));
 		assertTrue("Map correct", null == cont.getValueFromMap(strArray[5]));
 		assertTrue("Map correct", new Integer(-1) != cont.getValueFromMap(strArray[5], new Integer(-1)));
+		assertFalse(expFalse);
+		assertTrue(expTrue);
 		
 	}
-	
 
 	@Test 
 	public void testContSingleton(){
