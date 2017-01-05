@@ -75,7 +75,7 @@ public class ContainersTest {
 
 	@Test 
 	public void testMapFunctionality(){
-		Map<String, Integer> myMap = cont.initMap();
+		Map<String, Integer> myMap = cont.initEmptyMap();
 		for (int i =0; i < intArray.length; i++){
 			myMap.put(strArray[i], intClassArray[i]);
 		}
