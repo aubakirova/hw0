@@ -17,25 +17,33 @@ import java.util.Set;
  */
 public interface Containers<T, S> {
 
-	//Create a set that stores the array of T objects
+	// Create and return a set that stores the array of T objects
+	// You do not need to create your own set implementation and 
+	// can use an existing set class.
 	public Set<T> initSet(T[] tArray);
 	
-	//Create a list that stores an the array of T objects
+	// Create and return a list that stores an the array of T objects
+	// You do not need to create your own list implementation and 
+	// can use an existing list class.
 	public List<T> initList(T[] tArray);
 	
-	//Create an empty map that will use type S as keys, and T as values
+	// Create and return an empty map that will use type S as keys, and T as values
+	// You do not need to create your own map implementation and 
+	// can use an existing map class.
 	public Map<S,T> initEmptyMap();
 	
-	//Store the map in a local field variable -- often called a setter 
+	// Store the map in a local field variable -- often called a setter 
 	public void storeMap(Map<S,T> mapToStoreInClass);
 	
-	//add a key value to store map with a boolean indicating whether to overwrite existing value
+	// Add a key value to the stored/local map with a boolean indicating whether to overwrite existing value
+	// The return value indicates if you added the key value pair to the map
+	// You do not need to check if the value changed or not (e.g. no need to compare values)
 	public boolean addToMap(S key, T value, boolean overwriteExistingKey);
 	
-	//get a value based on a key
+	// Return a value from the stored/local map based on the key
 	public T getValueFromMap(S key);
 	
-	//an overloaded function to get value from map but with a default value
-	//if the key is not present
+	// An overloaded function to get a value from the store/local map, but with a default value
+	// if the key is not present in the map.
 	public T getValueFromMap(S key, T defaultValue);
 }
