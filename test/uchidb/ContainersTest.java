@@ -27,7 +27,7 @@ public class ContainersTest {
 	//Array of ints (primitive types)
 	//Uses shortcut syntax to make array
 	int[] intArray = {
-			1,14,4,20,14
+		1,14,4,20,14
 	};
 	
 	//Array of Integers (class type)
@@ -35,7 +35,7 @@ public class ContainersTest {
 	
 	//Array of Strings (class), with shortcut syntax
 	String[] strArray = {
-			"Uwe", "Eric","Vlaad","Sid","Richard", "Sean"
+		"Uwe", "Eric","Vlaad","Sid","Richard", "Sean"
 	};
 	
 	

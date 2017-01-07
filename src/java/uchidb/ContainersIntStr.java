@@ -15,7 +15,7 @@ import java.util.HashSet;
  */
 
 public class ContainersIntStr implements Containers<Integer, String> {
-	private Map<String,Integer> map = null;
+	private Map<String,Integer> map = initEmptyMap();
 
 	//Create a set that stores the array of T objects
 	public Set<Integer> initSet(Integer[] tArray) {
