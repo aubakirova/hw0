@@ -84,6 +84,8 @@ public class ContainersTest {
 		}
 		boolean expFalse = cont.addToMap("Uwe", 1000, false);
 		boolean expTrue = cont.addToMap("Richard", new Integer(42), true);
+		assertTrue(cont.addToMap("Richard", new Integer(42), true));
+		assertFalse(cont.addToMap("Richard", new Integer(42), false));
 		
 		assertTrue("Map correct", intClassArray[2] == cont.getValueFromMap(strArray[2]));
 		assertTrue("Map correct", intClassArray[0] == cont.getValueFromMap(strArray[0]));
@@ -93,7 +95,6 @@ public class ContainersTest {
 		assertTrue("Map correct", new Integer(-1) != cont.getValueFromMap(strArray[5], new Integer(-1)));
 		assertFalse(expFalse);
 		assertTrue(expTrue);
-		
 	}
 
 	@Test 

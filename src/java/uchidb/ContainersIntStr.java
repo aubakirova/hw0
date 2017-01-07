@@ -47,8 +47,8 @@ public class ContainersIntStr implements Containers<Integer, String> {
 	
 	//add a key value to store map with a boolean indicating whether to overwrite existing value
 	public boolean addToMap(String key, Integer value, boolean overwriteExistingKey) {
-		if (map.containsKey(key) && map.get(key) != value && !overwriteExistingKey)
-			return false;
+		if (map.containsKey(key) && !overwriteExistingKey)
+			return overwriteExistingKey;
 		map.put(key, value);
 		return true;
 	}
